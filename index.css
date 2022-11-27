@@ -5,3 +5,50 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+.page-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.all-read {
+    border: none;
+    background-color: #fff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+}
+
+.update-li {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 2px 5px;
+    background-color: hsl(211, 68%, 94%);
+}
+
+.notifs {
+    display: flex;
+    flex-direction: column;
+}
+
+.notifs p,
+.notifs h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.notifs-par {
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    padding: 10px 20px;
+}
