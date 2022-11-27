@@ -52,3 +52,13 @@ ul {
 main {
     padding: 10px 20px;
 }
+
+.user-image {
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+.user-dp,
+.notifs {
+    padding: 10px 0;
+}
