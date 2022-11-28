@@ -19,7 +19,7 @@
   background-color: #fff;
 }
 
-ul {
+.notifications-ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ ul {
   flex-direction: row;
 }
 
-main {
+#main {
   padding: 10px 20px;
   background-color: hsl(0, 0%, 100%);
 }
