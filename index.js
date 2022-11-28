@@ -4,7 +4,7 @@ const notifications = [
    {
         status: true,
         id: 'notif-1',
-        userImage: './images/1.jpg',
+        userImage: './assets/images/avatar-mark-webber.webp',
         friendName: 'Mark Webber',
         activityDone: 'reacted to your recent post',
         eventActivity: 'My first tournament today!',
@@ -18,6 +18,52 @@ const notifications = [
         activityDone: 'followed you',
         eventActivity: ' ',
         time: '5m ago'
+    },
+    {
+        status: true,
+        id: 'notif-3',
+        userImage: './assets/images/avatar-jacob-thompson.webp',
+        friendName: 'Jacob Thompson',
+        activityDone: 'has joined your group',
+        eventActivity: 'Chess Club',
+        time: '1 day ago'
+    },
+    {
+        status: false,
+        id: 'notif-4',
+        userImage: './assets/images/avatar-rizky-hasanuddin.webp',
+        friendName: 'Rizky Hasanuddin',
+        activityDone: 'sent you a private message',
+        eventActivity: `<p class="sender-msg-container">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+        I'm already having lots of fun and improving my game.</p>`,
+        time: '5 days ago'
+    },
+    {
+        status: false,
+        id: 'notif-5',
+        userImage: './assets/images/avatar-kimberly-smith.webp',
+        friendName: 'Kimberly Smith',
+        activityDone: 'commented on your picture',
+        eventActivity: ' ',
+        time: '1 week ago'
+    },
+    {
+        status: false,
+        id: 'notif-6',
+        userImage: './assets/images/avatar-nathan-peterson.webp',
+        friendName: 'Nathan Peterson',
+        activityDone: 'reacted to your recent post',
+        eventActivity: '5 end-game strategies to increase your win rate',
+        time: '2 weeks ago'
+    },
+    {
+        status: false,
+        id: 'notif-7',
+        userImage: './assets/images/avatar-anna-kim.webp',
+        friendName: 'Anna Kim',
+        activityDone: 'left the group',
+        eventActivity: 'Chess Club',
+        time: '2 weeks ago'
     }
 ]
 
@@ -27,34 +73,26 @@ notificationsDisplay.className = 'notifications-ul';
 main.appendChild(notificationsDisplay);
 
 
-const renderNotifications = () => {
+const renderNotifications = (el) => {
     let displayLi = document.createElement('li');
     displayLi.className = 'update-li';
     displayLi.innerHTML =
-    notifications.map((notifications) => (
     `
     <section class="user-dp">
-        <img class="user-image" src=${notifications.userImage} alt="User Dp">
+        <img class="user-image" src=${el.userImage} alt="User Dp">
     </section>
     <section class="notifs">
         <p class="notifs-par">
            <span>
-              <b>${notifications.friendName} </b> 
-              ${notifications.activityDone}
-              <b>${notifications.eventActivity}</b>
+              <b>${el.friendName} </b> 
+              ${el.activityDone}
+              <b class="sender-msg">${el.eventActivity}</b>
             </span>
         </p>
-        <h4>${notifications.time}</h4>
+        <h4>${el.time}</h4>
     </section>
     `
-   ))
     notificationsDisplay.appendChild(displayLi);
 };
 
-notifications.forEach(renderNotifications)
-
-// Tried the loop another way
-
-// for(let i=0; i<notifications.length; i++){
-//     renderNotifications([i])
-// }
+notifications.forEach((notifications) => renderNotifications(notifications))
