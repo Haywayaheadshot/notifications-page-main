@@ -35,6 +35,14 @@
   border-radius: 10px;
 }
 
+.update-li-read {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 2px 5px;
+  background-color: hsl(210, 60%, 98%);
+  border-radius: 10px;
+}
+
 .notifs {
   display: flex;
   flex-direction: column;
@@ -88,4 +96,5 @@
   border-radius: 50%;
   width: 5px;
   height: 5px;
+  display: flex;
 }
