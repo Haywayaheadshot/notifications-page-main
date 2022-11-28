@@ -82,3 +82,10 @@
   align-items: center;
   padding: 2vh 15px;
 }
+
+.red-dot {
+  background-color: hsl(1, 90%, 64%);
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+}

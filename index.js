@@ -84,7 +84,10 @@ const renderNotifications = (el) => {
            <span>
               <b>${el.friendName} </b> 
               ${el.activityDone}
+              <span class="red-dot-span">
               <b class="sender-msg">${el.eventActivity}</b>
+              <div class="red-dot"></div>
+              </span>
             </span>
         </p>
         <h4>${el.time}</h4>
