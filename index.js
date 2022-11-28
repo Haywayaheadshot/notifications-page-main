@@ -2,7 +2,7 @@ const main = document.querySelector('#main');
 
 const notifications = [
   {
-    status: true,
+    unread: true,
     id: 'notif-1',
     userImage: './assets/images/avatar-mark-webber.webp',
     friendName: 'Mark Webber',
@@ -11,7 +11,7 @@ const notifications = [
     time: '1m ago',
   },
   {
-    status: true,
+    unread: true,
     id: 'notif-2',
     userImage: './assets/images/avatar-angela-gray.webp',
     friendName: 'Angela Gray',
@@ -20,7 +20,7 @@ const notifications = [
     time: '5m ago',
   },
   {
-    status: true,
+    unread: true,
     id: 'notif-3',
     userImage: './assets/images/avatar-jacob-thompson.webp',
     friendName: 'Jacob Thompson',
@@ -29,7 +29,7 @@ const notifications = [
     time: '1 day ago',
   },
   {
-    status: false,
+    unread: false,
     id: 'notif-4',
     userImage: './assets/images/avatar-rizky-hasanuddin.webp',
     friendName: 'Rizky Hasanuddin',
@@ -39,7 +39,7 @@ const notifications = [
     time: '5 days ago',
   },
   {
-    status: false,
+    unread: false,
     id: 'notif-5',
     userImage: './assets/images/avatar-kimberly-smith.webp',
     friendName: 'Kimberly Smith',
@@ -48,7 +48,7 @@ const notifications = [
     time: '1 week ago',
   },
   {
-    status: false,
+    unread: false,
     id: 'notif-6',
     userImage: './assets/images/avatar-nathan-peterson.webp',
     friendName: 'Nathan Peterson',
@@ -57,7 +57,7 @@ const notifications = [
     time: '2 weeks ago',
   },
   {
-    status: false,
+    unread: false,
     id: 'notif-7',
     userImage: './assets/images/avatar-anna-kim.webp',
     friendName: 'Anna Kim',
@@ -75,24 +75,40 @@ main.appendChild(notificationsDisplay);
 const renderNotifications = (el) => {
   const displayLi = document.createElement('li');
   displayLi.className = 'update-li';
-  displayLi.innerHTML = `
-    <section class="user-dp">
-        <img class="user-image" src=${el.userImage} alt="User Dp">
-    </section>
-    <section class="notifs">
-        <p class="notifs-par">
-           <span>
-              <b>${el.friendName} </b> 
-              ${el.activityDone}
-              <span class="red-dot-span">
-              <b class="sender-msg">${el.eventActivity}</b>
-              <div class="red-dot"></div>
-              </span>
-            </span>
-        </p>
-        <h4>${el.time}</h4>
-    </section>
-    `;
+
+  let userDp = document.createElement('section');
+  userDp.className = 'user-dp';
+  userDp.innerHTML = `<img class="user-image" src=${el.userImage} alt="User Dp">`;
+  displayLi.appendChild(userDp);
+
+  let notifs = document.createElement('section');
+  notifs.className = 'notifs';
+  notifs.innerHTML = 
+  `
+  <p class="notifs-par">
+     <span>
+        <b>${el.friendName} </b> 
+        ${el.activityDone}
+        <b class="sender-msg">${el.eventActivity}</b>
+      </span>
+  </p>
+  `
+  displayLi.appendChild(notifs);
+
+  let redDot = document.createElement('div');
+  redDot.className = 'red-dot';
+  notifs.appendChild(redDot)
+
+  let timeDiv = document.createElement('h4');
+  timeDiv.innerText = `${el.time}`;
+  notifs.appendChild(timeDiv)
+
+  if(el.unread){
+    redDot.style.display = 'flex';
+  } else {
+    redDot.style.display = 'none';
+    displayLi.classList.replace('update-li','update-li-read');
+  }
   notificationsDisplay.appendChild(displayLi);
 };
 
