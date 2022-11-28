@@ -76,15 +76,14 @@ const renderNotifications = (el) => {
   const displayLi = document.createElement('li');
   displayLi.className = 'update-li';
 
-  let userDp = document.createElement('section');
+  const userDp = document.createElement('section');
   userDp.className = 'user-dp';
   userDp.innerHTML = `<img class="user-image" src=${el.userImage} alt="User Dp">`;
   displayLi.appendChild(userDp);
 
-  let notifs = document.createElement('section');
+  const notifs = document.createElement('section');
   notifs.className = 'notifs';
-  notifs.innerHTML = 
-  `
+  notifs.innerHTML = `
   <p class="notifs-par">
      <span>
         <b>${el.friendName} </b> 
@@ -92,22 +91,22 @@ const renderNotifications = (el) => {
         <b class="sender-msg">${el.eventActivity}</b>
       </span>
   </p>
-  `
+  `;
   displayLi.appendChild(notifs);
 
-  let redDot = document.createElement('div');
+  const redDot = document.createElement('div');
   redDot.className = 'red-dot';
-  notifs.appendChild(redDot)
+  notifs.appendChild(redDot);
 
-  let timeDiv = document.createElement('h4');
+  const timeDiv = document.createElement('h4');
   timeDiv.innerText = `${el.time}`;
-  notifs.appendChild(timeDiv)
+  notifs.appendChild(timeDiv);
 
-  if(el.unread){
+  if (el.unread) {
     redDot.style.display = 'flex';
   } else {
     redDot.style.display = 'none';
-    displayLi.classList.replace('update-li','update-li-read');
+    displayLi.classList.replace('update-li', 'update-li-read');
   }
   notificationsDisplay.appendChild(displayLi);
 };
