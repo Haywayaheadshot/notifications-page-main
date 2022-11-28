@@ -19,7 +19,7 @@
   background-color: #fff;
 }
 
-ul {
+.notifications-ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ ul {
   flex-direction: row;
 }
 
-main {
+#main {
   padding: 10px 20px;
   background-color: hsl(0, 0%, 100%);
 }
@@ -64,4 +64,21 @@ main {
 .user-dp,
 .notifs {
   padding: 10px 0;
+}
+
+.sender-msg-container {
+  border: 1px solid hsl(205, 33%, 90%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.sender-msg {
+  font-size: 16px;
+}
+
+.update-li:nth-child(4) .sender-msg {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 15px;
 }
