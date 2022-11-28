@@ -65,3 +65,20 @@
 .notifs {
   padding: 10px 0;
 }
+
+.sender-msg-container {
+  border: 1px solid hsl(205, 33%, 90%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.sender-msg {
+  font-size: 16px;
+}
+
+.update-li:nth-child(4) .sender-msg {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 15px;
+}
