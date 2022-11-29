@@ -1,5 +1,6 @@
 const main = document.querySelector('#main');
 const totalUnread = document.querySelector('.total-unread');
+const markAsRead = document.querySelector('.all-read');
 const unreadArr = [];
 
 const notifications = [
@@ -124,3 +125,13 @@ notifications.forEach((notifications) => renderNotifications(notifications));
 
 // Attach the length of unreadArr to the header in html
 totalUnread.innerText = unreadArr.length;
+
+// Add event listener to mark all messages are read
+markAsRead.addEventListener('click', ()=> {
+  for(let i=0;i<notifications.length;i++){
+    if(notifications[i].unread){
+      notifications[i].unread = false;
+      renderNotifications(notifications[i])
+    }
+  }
+})
