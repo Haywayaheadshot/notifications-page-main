@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile](./assets/images/Screenshots/Notifications-page-mobile.png)
+[Mobile](./assets/images/Screenshots/Notifications-page-mobile.png)
 
 ![Desktop](./assets/images/Screenshots/Notifications-page-desktop.png)
 
