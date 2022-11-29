@@ -46,7 +46,7 @@ const notifications = [
     userImage: './assets/images/avatar-kimberly-smith.webp',
     friendName: 'Kimberly Smith',
     activityDone: 'commented on your picture',
-    eventActivity: ' ',
+    eventActivity: '<img class="kimberly-chess-img" src="./assets/images/image-chess.webp" alt="Kimberly Playing Chess"/>',
     time: '1 week ago',
   },
   {
