@@ -1,4 +1,6 @@
 const main = document.querySelector('#main');
+const totalUnread = document.querySelector('.total-unread');
+const unreadArr = [];
 
 const notifications = [
   {
@@ -72,6 +74,7 @@ const notificationsDisplay = document.createElement('ul');
 notificationsDisplay.className = 'notifications-ul';
 main.appendChild(notificationsDisplay);
 
+// Create function to render notifications
 const renderNotifications = (el) => {
   const displayLi = document.createElement('li');
   displayLi.className = 'update-li';
@@ -103,12 +106,21 @@ const renderNotifications = (el) => {
   notifs.appendChild(timeDiv);
 
   if (el.unread) {
+    // display red dot
     redDot.style.display = 'flex';
+
+    // Check for the unread messages and push to an unreadArr
+    unreadArr.push(Object.values(el));
   } else {
     redDot.style.display = 'none';
     displayLi.classList.replace('update-li', 'update-li-read');
   }
+
   notificationsDisplay.appendChild(displayLi);
 };
 
+// run render notifications on all notifications
 notifications.forEach((notifications) => renderNotifications(notifications));
+
+// Attach the length of unreadArr to the header in html
+totalUnread.innerText = unreadArr.length;
