@@ -15,10 +15,6 @@
   padding: 0 5vw;
 }
 
-.kimberly-chess-img {
-  max-width: 2em;
-}
-
 .total-unread {
   background-color: hsl(219, 85%, 26%);
   padding: 1px 8px;
@@ -101,6 +97,7 @@
 .kimberly-chess-img {
   float: right;
   margin-top: 5px;
+  max-width: 2em;
 }
 
 .update-li:nth-child(4) .sender-msg {
