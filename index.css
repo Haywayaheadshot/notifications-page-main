@@ -12,6 +12,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 0 5vw;
+}
+
+.kimberly-chess-img {
+  max-width: 2em;
+}
+
+.total-unread {
+  background-color: hsl(219, 85%, 26%);
+  padding: 1px 8px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .all-read {
@@ -33,6 +46,7 @@
   padding: 2px 5px;
   background-color: hsl(211, 68%, 94%);
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .update-li-read {
@@ -41,6 +55,7 @@
   padding: 2px 5px;
   background-color: hsl(210, 60%, 98%);
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .notifs {
@@ -83,6 +98,11 @@
   font-size: 16px;
 }
 
+.kimberly-chess-img {
+  float: right;
+  margin-top: 5px;
+}
+
 .update-li:nth-child(4) .sender-msg {
   font-size: 16px;
   display: flex;
@@ -97,4 +117,34 @@
   width: 5px;
   height: 5px;
   display: flex;
+}
+
+@media (min-width: 760px) {
+  .page-header {
+    padding: 0 27vw;
+  }
+
+  .update-li,
+  .update-li-read {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+
+  .notifications-ul {
+    padding: 0 25vw;
+  }
+
+  .total-unread {
+    padding: 2px 15px;
+    border-radius: 10px;
+  }
+
+  .notifs {
+    margin-left: -25px;
+  }
+
+  .kimberly-chess-img {
+    float: right;
+    margin: -20px 0 0 170px;
+  }
 }
