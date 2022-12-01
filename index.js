@@ -1,5 +1,6 @@
 const main = document.querySelector('#main');
 const totalUnread = document.querySelector('.total-unread');
+const markAsRead = document.querySelector('.all-read');
 const unreadArr = [];
 
 const notifications = [
@@ -115,6 +116,16 @@ const renderNotifications = (el) => {
     redDot.style.display = 'none';
     displayLi.classList.replace('update-li', 'update-li-read');
   }
+
+  markAsRead.addEventListener('click', () => {
+    notifications.forEach((notification) => {
+      if (notification.unread) {
+        redDot.style.display = 'none';
+        displayLi.classList.replace('update-li', 'update-li-read');
+        totalUnread.innerText = '0';
+      }
+    });
+  });
 
   notificationsDisplay.appendChild(displayLi);
 };
