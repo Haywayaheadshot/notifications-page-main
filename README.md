@@ -12,7 +12,6 @@ This is a solution to the [Notifications page challenge on Frontend Mentor](http
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -36,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Haywayaheadshot/notifications-page-main)
-- Live Site URL: [Add live site URL here](https://haywayaheadshot.github.io/notifications-page-main/)
+- Live Site URL: [Live Demo](https://haywayaheadshot.github.io/notifications-page-main/)
 
 ## My process
 
@@ -76,7 +75,7 @@ I will like to work on more JavaScript problems. I want to focus on the being ab
 
 ## Author
 
-- Website - [Abubakar Ummar](https://github.com/Haywayaheadshot)
+- Github - [Abubakar Ummar](https://github.com/Haywayaheadshot)
 - Frontend Mentor - [@Haywayaheadshot](https://www.frontendmentor.io/profile/Haywayaheadshot)
 - Twitter - [@haywayalive](https://twitter.com/haywayalive)
 
