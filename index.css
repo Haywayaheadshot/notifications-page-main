@@ -1,3 +1,4 @@
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -5,6 +6,10 @@
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.font {
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .page-header {
@@ -26,6 +31,15 @@
 .all-read {
   border: none;
   background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.all-read:hover {
+  border: none;
+  background-color: #fff;
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
 }
 
 .notifications-ul {
@@ -45,6 +59,10 @@
   cursor: pointer;
 }
 
+.update-li:hover {
+  background-color: hsl(205, 33%, 90%);
+}
+
 .update-li-read {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -52,6 +70,10 @@
   background-color: hsl(210, 60%, 98%);
   border-radius: 10px;
   cursor: pointer;
+}
+
+.update-li-read:hover {
+  background-color: hsl(205, 33%, 90%);
 }
 
 .notifs {
@@ -88,6 +110,11 @@
 .sender-msg-container {
   border: 1px solid hsl(205, 33%, 90%);
   background-color: hsl(0, 0%, 100%);
+}
+
+.sender-msg-container:hover {
+  background-color: hsl(211, 68%, 94%);
+  border: 1px solid red;
 }
 
 .sender-msg {
