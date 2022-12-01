@@ -117,6 +117,16 @@ const renderNotifications = (el) => {
     displayLi.classList.replace('update-li', 'update-li-read');
   }
 
+  markAsRead.addEventListener('click', () => {
+    notifications.forEach((notification) => {
+      if (notification.unread) {
+        redDot.style.display = 'none';
+        displayLi.classList.replace('update-li', 'update-li-read');
+        totalUnread.innerText = '0';
+      }
+    });
+  });
+
   notificationsDisplay.appendChild(displayLi);
 };
 
@@ -125,13 +135,3 @@ notifications.forEach((notifications) => renderNotifications(notifications));
 
 // Attach the length of unreadArr to the header in html
 totalUnread.innerText = unreadArr.length;
-
-// Add event listener to mark all messages are read
-markAsRead.addEventListener('click', ()=> {
-  for(let i=0;i<notifications.length;i++){
-    if(notifications[i].unread){
-      notifications[i].unread = false;
-      renderNotifications(notifications[i])
-    }
-  }
-})
