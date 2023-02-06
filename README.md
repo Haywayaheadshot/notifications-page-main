@@ -12,6 +12,7 @@ This is a solution to the [Notifications page challenge on Frontend Mentor](http
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
+  - [Setup And Installation](#set-up)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -72,6 +73,11 @@ const proudOfThisFunc = () => {
 ### Continued development
 
 I will like to work on more JavaScript problems. I want to focus on the being able to learn how to manipulate data to suit my desire.
+
+### Setup And Installation
+- Clone this [repo](https://github.com/Haywayaheadshot/notifications-page-main.git) to your desired folder
+- cd notifications-page-main
+- open index.html file
 
 ## Author
 
